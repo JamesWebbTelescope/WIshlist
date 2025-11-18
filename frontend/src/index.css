@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+
+/* Custom gradient animation */
+@keyframes gradient-colors {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@layer utilities {
+  /* Animated gradient text */
+  .animate-gradient-colors {
+    animation: gradient-colors 5s ease infinite;
+  }
+
+  /* Glow for text */
+  .text-glow {
+    text-shadow: 
+      0 0 10px rgba(59,130,246,0.8),
+      0 0 20px rgba(59,130,246,0.6),
+      0 0 30px rgba(59,130,246,0.4);
+  }
+}
