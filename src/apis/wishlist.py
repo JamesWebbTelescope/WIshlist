@@ -12,7 +12,7 @@ def create_api_wishlist(db_manager):
     @api.route("/")
     class Wishlist(Resource):
         
-        @api.doc('Get all orders')
+        @api.doc('Get all wishes')
         def get(self):
             result = db_manager.wishlist.GetAll()
             return result
@@ -26,6 +26,13 @@ def create_api_wishlist(db_manager):
             link = api.payload['link']
             result = db_manager.wishlist.Insert(name, price, link)
             #orders_list.append({'id': {orderID}, 'produktID': {produktID}, 'warelist': {warelist}, 'total': {total}})
+            return result
+        
+        @api.doc('Remove a wish')
+        @api.expect(wishlist_model)
+        def delete(self):
+            name = api.payload['name']
+            result = db_manager.wishlist.Delete(name)
             return result
         
     return api

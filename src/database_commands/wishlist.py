@@ -43,6 +43,30 @@ class WishlistModel:
             if conn is not None:
                 conn.close()
 
+    def Delete(self, name):
+        try:
+            conn = self.db.get_connection()
+            with conn.cursor() as cursor:
+                query = "DELETE FROM wishlist WHERE name = %s"
+                cursor.execute(query, (name,))
+        except Exception as e:
+            print("Error deleting wishes:", e)
+            return False
+        finally:
+            return True
+
+    def Update(self, name, price, link):
+        try:
+            conn = self.db.get_connection()
+            with conn.cursor() as cursor:
+                query = "DELETE FROM wishlist WHERE name = %s"
+                cursor.execute(query, (name,))
+        except Exception as e:
+            print("Error deleting wishes:", e)
+            return False
+        finally:
+            return True
+
     def _totuple(self, myresult):
         result = {
                 "wishID": myresult[0],
