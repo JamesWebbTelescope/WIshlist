@@ -35,4 +35,14 @@ def create_api_wishlist(db_manager):
             result = db_manager.wishlist.Delete(name)
             return result
         
+        @api.doc('Update a wish (not completed)')
+        @api.expect(wishlist_model)
+        def put(self):
+            name = api.payload['name']
+            price = api.payload['price']
+            link = api.payload['link']
+            result = db_manager.wishlist.Update(name, price, link)
+            return result
+
+
     return api
