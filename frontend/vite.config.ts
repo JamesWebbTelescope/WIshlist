@@ -12,6 +12,7 @@ dotenv.config({ path: path.resolve(__dirname, 'globals.env') });
 // https://vite.dev/config/
 export default defineConfig({  
   define: {
+    base: '/',
     'import.meta.env.VITE_API_URL': JSON.stringify(process.env.VITE_API_URL),
     'import.meta.env.VITE_VERSION': JSON.stringify(process.env.VITE_VERSION),
   },
