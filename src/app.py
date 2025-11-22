@@ -9,6 +9,11 @@ from flask_cors import CORS
 import os
 from waitress import serve
 
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "https://github.com/JamesWebbTelescope/Wishlist"
+]
+
 
 def get_origin(origin):
     return origin if origin in ALLOWED_ORIGINS else None
