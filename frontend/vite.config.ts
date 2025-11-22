@@ -17,12 +17,17 @@ export default defineConfig({
     'import.meta.env.VITE_VERSION': JSON.stringify(process.env.VITE_VERSION),
   },*/
    server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000', // your backend server URL
-      },
+        host: '0.0.0.0',
+        port: 5173,
+        strictPort: true, // if you want Vite to fail if the port is already in use
+        cors: {
+            origin: 'http://localhost', // or the specific origin of your Laravel app
+            credentials: true,
+        },
+        hmr: {
+            host: 'localhost',
+        },
     },
-  },
   base: "https://github.com/JamesWebbTelescope/Wishlist",
   plugins: [
     react({
