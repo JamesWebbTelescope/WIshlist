@@ -10,8 +10,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/wishes" element= {<WishPage/>}/>
+        <Route path="http://jameswebbtelescope.github.io/Wishlist/" element={<Home />} />
+        <Route path="http://jameswebbtelescope.github.io/Wishlist/wishes" element= {<WishPage/>}/>
       </Routes>
     </BrowserRouter>
   );
