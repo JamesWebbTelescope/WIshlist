@@ -16,18 +16,6 @@ export default defineConfig({
     'import.meta.env.VITE_API_URL': JSON.stringify(process.env.VITE_API_URL),
     'import.meta.env.VITE_VERSION': JSON.stringify(process.env.VITE_VERSION),
   },*/
-   server: {
-        host: '0.0.0.0',
-        port: 5173,
-        strictPort: true, // if you want Vite to fail if the port is already in use
-        cors: {
-            origin: "https://github.com/JamesWebbTelescope/Wishlist", // or the specific origin of your Laravel app
-            credentials: true,
-        },
-        hmr: {
-            host: "https://github.com/JamesWebbTelescope/Wishlist",
-        },
-    },
   base: "https://github.com/JamesWebbTelescope/Wishlist/frontend/dist/",
   plugins: [
     react({
