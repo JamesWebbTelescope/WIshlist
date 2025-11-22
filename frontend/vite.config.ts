@@ -28,7 +28,7 @@ export default defineConfig({
             host: "https://github.com/JamesWebbTelescope/Wishlist",
         },
     },
-  base: "https://github.com/JamesWebbTelescope/Wishlist/",
+  base: "https://github.com/JamesWebbTelescope/Wishlist/frontend/dist/",
   plugins: [
     react({
       babel: {
