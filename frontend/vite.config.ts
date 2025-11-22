@@ -16,6 +16,13 @@ export default defineConfig({
     'import.meta.env.VITE_API_URL': JSON.stringify(process.env.VITE_API_URL),
     'import.meta.env.VITE_VERSION': JSON.stringify(process.env.VITE_VERSION),
   },*/
+   server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000', // your backend server URL
+      },
+    },
+  },
   base: "https://github.com/JamesWebbTelescope/Wishlist",
   plugins: [
     react({
