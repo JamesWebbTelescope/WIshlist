@@ -17,7 +17,7 @@ export default function WishPage() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const wishes = await GetWishes(API_URL);
+            /*const wishes = await GetWishes(API_URL);
             console.log("Welcome to the wishlist page")
             for(const wish of wishes){
                 console.log(`Getting all wishes`)
@@ -35,10 +35,10 @@ export default function WishPage() {
                         console.log(w.price)
                         }
                 }           
-            setWishData(results);
+            setWishData(results);*/
         };
         fetchData();
-    }, [wishes]);
+    }, []);
 
     return(
     <Layout>
