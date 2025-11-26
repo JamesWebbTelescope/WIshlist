@@ -87,7 +87,7 @@ Please change the parent <Route path="${m}"> to <Route path="${m==="/"?"*":`${m}
     hover:before:opacity-50
     hover:before:scale-125
     before:pointer-events-none
-  `,children:"Home"}),L.jsx("a",{href:"/Wishlist/wishes",className:`
+  `,children:"Home"}),L.jsx("a",{href:"/wishes",className:`
     relative
     px-4 py-2
     text-white
@@ -135,4 +135,4 @@ Please change the parent <Route path="${m}"> to <Route path="${m==="/"?"*":`${m}
                        bg-linear-to-r from-red-400 via-green-400 to-pink-400\r
                        bg-size-[200%_200%] animate-gradient-colors text-glow\r
                        leading-tight`,children:"Welcome to Viktor's wishlist"}),L.jsx("p",{className:"text-gray-400 max-w-xl mb-8",children:"This is my wishlist"})]})}),t[0]=l):l=t[0],l}const _1=async t=>{try{const e=await(await fetch(`${t}/api/wishlist`)).json();let a=[];for(let u=0;u<e.length;u++){const n={};n.id=e[u].ID,n.price=e[u].price,n.name=e[u].name,n.link=e[u].link,a.push(n)}return Array.isArray(a)?a:[]}catch(l){return console.log("Error fetching wishes:",l),[]}};function O1(){const[t,l]=S.useState([]),e="http://127.0.0.1:5000",a=[];return S.useEffect(()=>{(async()=>{const n=await _1(e);console.log("Welcome to the wishlist page");for(const i of n){console.log("Getting all wishes");const f=n.find(c=>c.id===i.id);f&&(a.push({id:f.id,price:f.price,name:f.name,link:f.link}),console.log(f.id),console.log(f.price),console.log(f.name),console.log(f.price))}l(a)})()},[t]),L.jsx(Fh,{children:L.jsxs("div",{children:[L.jsx("h2",{children:"Wishlist"}),L.jsxs("table",{className:"table",children:[L.jsx("thead",{children:L.jsxs("tr",{children:[L.jsx("th",{children:"Price"}),L.jsx("th",{children:"Name"}),L.jsx("th",{children:"Link"})]})}),L.jsx("tbody",{children:t.map((u,n)=>L.jsxs("tr",{children:[L.jsx("td",{children:u.price}),L.jsx("td",{children:u.name}),L.jsx("td",{children:u.link})]},n))})]})]})})}function M1(){const t=Pn.c(2);let l;t[0]===Symbol.for("react.memo_cache_sentinel")?(l=L.jsx(Xf,{path:"/",element:L.jsx(A1,{})}),t[0]=l):l=t[0];let e;return t[1]===Symbol.for("react.memo_cache_sentinel")?(e=L.jsx(r1,{children:L.jsxs(Xv,{children:[l,L.jsx(Xf,{path:"/wishes",element:L.jsx(O1,{})})]})}),t[1]=e):e=t[1],e}Wy.createRoot(document.getElementById("root")).render(L.jsx(S.StrictMode,{children:L.jsx(M1,{})}));
-//# sourceMappingURL=index-DiY88uUT.js.map
+//# sourceMappingURL=index-DxWt2u_S.js.map
