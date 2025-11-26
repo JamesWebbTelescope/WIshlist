@@ -53,10 +53,10 @@ export default function Navbar() {
 
   return (
     <nav className="flex gap-6 justify-center mt-6">
-      <a href="/" className={holoLinkClass}>
+      <a href="/home" className={holoLinkClass}>
         Home
       </a>
-      <a href="/Wishlist/wishes" className={holoLinkClass}>
+      <a href="/wishes" className={holoLinkClass}>
         Wishlist
       </a>
       {
