@@ -1,6 +1,6 @@
-import { Routes, Route, HashRouter } from "react-router-dom";
+//import { Routes, Route, HashRouter } from "react-router-dom";
 import "./index.css"
-import Home from "./pages/Home";
+//import Home from "./pages/Home";
 import WishPage from "./pages/Wishes"
 
 //import Products from "./pages/Products";
@@ -9,12 +9,15 @@ import WishPage from "./pages/Wishes"
 
 export default function App() {
   return (
-    <HashRouter >
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Wishlist/wishes" element= {<WishPage/>}/>
-      </Routes>
-    </HashRouter>
+    <div>
+      <WishPage/>
+    </div>
+    //<HashRouter >
+      //<Routes>
+        //<Route path="/" element={<Home />} />
+        //<Route path="/Wishlist/wishes" element= {<WishPage/>}/>
+      //</Routes>
+    //</HashRouter>
   );
 }
 
