@@ -42,7 +42,7 @@ jobs:
               cd frontend
               npm ci
       - name: Start server
-              python src/app.py
+        run:  python src/app.py
       - name: Build
         run: |
               cd frontend
