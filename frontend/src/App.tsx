@@ -11,7 +11,7 @@ export default function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/wishes" element= {<WishPage/>}/>
+        <Route path="/" element= {<WishPage/>}/>
       </Routes>
     </HashRouter>
   );
