@@ -55,7 +55,6 @@ export default function WishPage() {
                 </p>
  
             </section>
-                <h2>Wishlist</h2>
 
 
                 <table className="table">
@@ -67,17 +66,17 @@ export default function WishPage() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr >
+                    <tr key={1}>
                         <td>{639}</td>
                         <td>{'Märklin 40402 Start up - Dobbeltdækker Styrevogn 2. klasse'}</td>
                         <td>{'https://www.smtmodeltog.dk/shop/marklin-40402-start-21780p.html'}</td>
                     </tr>
-                    <tr >
+                    <tr key={2}>
                         <td>{"Ukendt"}</td>
                         <td>{'Bukser'}</td>
                         <td>{}</td>
                     </tr>
-                    <tr >
+                    <tr key={3}>
                         <td>{"Ukendt"}</td>
                         <td>{'Ny smartphone'}</td>
                         <td>{}</td>
