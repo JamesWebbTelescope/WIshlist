@@ -43,6 +43,18 @@ export default function WishPage() {
     return(
     <Layout>
         <div>
+            <section className="flex flex-col items-center justify-center text-center py-20">
+                <h2 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text 
+                            bg-linear-to-r from-red-400 via-green-400 to-pink-400
+                            bg-size-[200%_200%] animate-gradient-colors text-glow
+                            leading-tight">
+                Welcome to Viktor's wishlist
+                </h2>
+                <p className="text-gray-400 max-w-xl mb-8">
+                This is my wishlist
+                </p>
+ 
+            </section>
                 <h2>Wishlist</h2>
 
 
@@ -55,17 +67,17 @@ export default function WishPage() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr key={1}>
+                    <tr >
                         <td>{639}</td>
                         <td>{'Märklin 40402 Start up - Dobbeltdækker Styrevogn 2. klasse'}</td>
                         <td>{'https://www.smtmodeltog.dk/shop/marklin-40402-start-21780p.html'}</td>
                     </tr>
-                    <tr key={2}>
+                    <tr >
                         <td>{"Ukendt"}</td>
                         <td>{'Bukser'}</td>
                         <td>{}</td>
                     </tr>
-                    <tr key={3}>
+                    <tr >
                         <td>{"Ukendt"}</td>
                         <td>{'Ny smartphone'}</td>
                         <td>{}</td>
