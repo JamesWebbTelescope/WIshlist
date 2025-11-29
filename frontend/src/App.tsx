@@ -28,8 +28,8 @@ export default function App() {
       <div>
       <BrowserRouter basename={import.meta.env.PUBLIC_URL}>
         <Routes>
-          <Route path="/Wishlist/" element={<Home />} />
-          <Route path="/wishes" element= {<WishPage/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/Wishlist/" element= {<WishPage/>}/>
         </Routes>
     </BrowserRouter>
     </div>
